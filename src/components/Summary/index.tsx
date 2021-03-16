@@ -20,7 +20,7 @@ export function Summary () {
           <p>Saídas</p>
           <img src={outcomeImg} alt="Saídas" />
         </header>
-        <strong>R$ 1.259,00</strong>
+        <strong>R$ -1.259,00</strong>
       </div>
 
       <div className="highlight-background">
@@ -28,7 +28,7 @@ export function Summary () {
           <p>Total</p>
           <img src={totalImg} alt="Total" />
         </header>
-        <strong>R$ -16.141,00</strong>
+        <strong>R$ 16.141,00</strong>
       </div>     
     </Container>
   );
