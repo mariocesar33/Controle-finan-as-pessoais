@@ -19,7 +19,7 @@ createServer({
           createdAt: new Date(),
         }
       ]
-    })
+    });
   }
 });
 ReactDOM.render(
