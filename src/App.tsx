@@ -20,7 +20,7 @@ export function App() {
   }
   return(
     <>
-      <Header OnOpenNewTransactionModal={handleOpenNewTransactionModal} />
+      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
 
       <Modal 
