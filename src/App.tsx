@@ -28,7 +28,7 @@ export function App() {
           onRequestClose={handleCloseNewTransactionModal}
         >
           <h2>Cadastrar Transação</h2>
-        </Modal>
+      </Modal>
       <GlobalStyle />
     </>
   );
