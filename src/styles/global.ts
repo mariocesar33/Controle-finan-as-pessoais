@@ -53,4 +53,11 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  .react-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .react-modal-content {
+
+  }
 `;
