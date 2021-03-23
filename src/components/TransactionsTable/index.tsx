@@ -8,7 +8,7 @@ interface Transaction {
   amount: number;
   type: string;
   category: string;
-  createAt: string;
+  createdAt: string;
 }
 
 export function TransactionsTable() {
@@ -37,9 +37,18 @@ export function TransactionsTable() {
               return (
                 <tr key={transaction.id}>
                   <td>{transaction.title}</td>
-                  <td className={transaction.type}>{transaction.amount}</td>
+                  <td className={transaction.type}>
+                    {new Intl.NumberFormat('CV', {
+                      style: 'currency',
+                      currency: 'ECV'
+                    }).format(transaction.amount)}
+                  </td>
                   <td>{transaction.category}</td>
-                  <td>{transaction.createAt}</td>
+                  <td>
+                    {new Intl.DateTimeFormat('CV').format(
+                      new Date(transaction.createdAt)
+                    )}
+                  </td>
                 </tr>
               );
             })
