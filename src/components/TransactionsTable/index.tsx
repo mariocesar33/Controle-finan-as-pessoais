@@ -33,25 +33,23 @@ export function TransactionsTable() {
 
         <tbody>
           {
-            transactions.map(transaction => {
-              return (
-                <tr key={transaction.id}>
-                  <td>{transaction.title}</td>
-                  <td className={transaction.type}>
-                    {new Intl.NumberFormat('CV', {
-                      style: 'currency',
-                      currency: 'ECV'
-                    }).format(transaction.amount)}
-                  </td>
-                  <td>{transaction.category}</td>
-                  <td>
-                    {new Intl.DateTimeFormat('CV').format(
-                      new Date(transaction.createdAt)
-                    )}
-                  </td>
-                </tr>
-              );
-            })
+            transactions.map(transaction => (
+              <tr key={transaction.id}>
+                <td>{transaction.title}</td>
+                <td className={transaction.type}>
+                  {new Intl.NumberFormat('CV', {
+                    style: 'currency',
+                    currency: 'ECV'
+                  }).format(transaction.amount)}
+                </td>
+                <td>{transaction.category}</td>
+                <td>
+                  {new Intl.DateTimeFormat('CV').format(
+                    new Date(transaction.createdAt)
+                  )}
+                </td>
+              </tr>
+            ))
           }
         </tbody>
       </table>
