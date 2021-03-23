@@ -9,6 +9,29 @@ createServer({
     transaction: Model
   },
 
+  seeds(server) {
+    server.db.loadData({
+      transactions: [
+        {
+          id: 1,
+          title: 'Freelance de website',
+          type: 'deposit',
+          category: 'Dev',
+          amount: 25000,
+          createdAt: new Date('2021-03-23 05:16:00')
+        },
+        {
+          id: 2,
+          title: 'Aluguer',
+          type: 'withdraw',
+          category: 'Casa',
+          amount: 18000,
+          createdAt: new Date('2021-01-14 13:30:00')
+        }
+      ]
+    })
+  },
+
   routes() {
     this.namespace = 'api';
 
@@ -23,6 +46,7 @@ createServer({
     });
   }
 });
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
